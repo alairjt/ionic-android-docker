@@ -15,3 +15,4 @@ RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean
 RUN cd / && echo 'n' | ionic start app && cd /app && ionic platform add android && ionic build android && rm -rf * .??* && rm /root/.android/debug.keystore
 
 WORKDIR /app
+
