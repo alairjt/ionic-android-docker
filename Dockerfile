@@ -12,7 +12,7 @@ RUN echo 'y' | /opt/android-sdk-linux/tools/android update sdk --no-ui
 RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean
 
 # Create dummy app to build and preload gradle and maven dependencies
-RUN cd / && echo 'n' | ionic start app && cd /app && ionic platform add android && ionic build android && rm -rf * .??* && rm /root/.android/debug.keystore
+#RUN cd / && echo 'n' | ionic start app && cd /app && ionic platform add android && ionic build android && rm -rf * .??* && rm /root/.android/debug.keystore
 
 WORKDIR /app
 
