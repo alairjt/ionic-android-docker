@@ -10,6 +10,8 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 RUN echo 'y' | /opt/android-sdk-linux/tools/android update sdk --no-ui
 # Install npm packages
 RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean
+RUN npm i -g protractor
+RUN webdriver-manager update
 
 # Create dummy app to build and preload gradle and maven dependencies
 #RUN cd / && echo 'n' | ionic start app && cd /app && ionic platform add android && ionic build android && rm -rf * .??* && rm /root/.android/debug.keystore
